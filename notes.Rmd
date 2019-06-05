@@ -1,0 +1,15 @@
+---
+title: "Final_assignment_262"
+author: "Rae Fuhrman"
+date: "6/5/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Potential threshold for tree death with certain levels of fog, tmax, and precipitation. Insert parameters for the species and models whether it meets that requirement. IF tmax is over a certain threshold for a certain number of days, precip below threshold, fog below threshold. 
+summary functions -- temp average, precip sum. etc. 
+
+commit
