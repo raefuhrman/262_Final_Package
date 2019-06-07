@@ -12,4 +12,62 @@ knitr::opts_chunk$set(echo = TRUE)
 Potential threshold for tree death with certain levels of fog, tmax, and precipitation. Insert parameters for the species and models whether it meets that requirement. IF tmax is over a certain threshold for a certain number of days, precip below threshold, fog below threshold. 
 summary functions -- temp average, precip sum. etc. 
 
-commit
+```{r Part 1 summary functions}
+
+##load packages and read data
+library(tidyverse)
+library(lubridate)
+climate_data <- read_csv("Climate_Data_SB_2018.csv")
+
+##parse date to use group by and summarize functions later
+climate_data$DATE <- parse_date_time(x = climate_data$DATE,
+                orders = c("d m y", "d B Y", "mdy"))
+climate_data$DATE <- as.Date(climate_data$DATE, format = "%m/%d/%y")
+
+##pick one station
+select_station_data <- function(cl_data,  st = "USC00047902") {
+  station_1 <- cl_data %>% 
+    filter(STATION == st) %>% 
+    select(STATION, PRCP, TMAX, TMIN, TOBS, DATE)
+  return(station_1)
+}
+x <- select_station_data(cl_data = climate_data)
+
+
+##average observed temperature by month
+average_temp <- station_1 %>% 
+  mutate(Month = format(station_1$DATE, "%m")) %>% 
+  group_by(Month) %>% 
+  summarize(Average_Monthly_Temp = mean(TOBS))
+
+##total yearly precipitation 
+yearly_precip <- as.data.frame(sum(station_1$PRCP))
+colnames(yearly_precip) <- "Total Rain (2018) at Station 1"
+
+
+
+
+#, year = format(station_1$DATE, "%Y")
+##test with group by year since there is only one year
+  
+###take this long vector and put it in a matrix with x columns and y rows to create a 2-d array, a 3-d array observations per year, plus another vector for the next station. take this long thing and fold it. 
+  #with matrix or array everything in the vector must be the same type of data and is representing the same data i.e. this is a vector of temps over a certain period of time so the. i.e. months, years, stations - all temp
+  #dataframe with month, year, station, and temp 
+
+
+##will set up testing framework
+##usethis::use_test() 
+
+
+```
+
+```{r}
+
+source("Average_Monthly_Temperature.R")
+x <- Average_Monthly_Temperature(climate_data)
+x
+
+```
+
+
+
