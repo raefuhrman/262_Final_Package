@@ -18,6 +18,37 @@ avg_precip <- climate_sb_2018_modified %>%
   group_by(month, year) %>% 
   summarize(average = mean(PRCP))
 
+plant_growth = function(PRCP) {
+  pg = (PRCP) ** 3 + 5
+  
+  if (PRCP <= 0) {
+    pg = 0
+  }
+  
+  if(PRCP > 1) {
+    pg = (PRCP) ** 2 + 1
+  }
+  
+  return (pg)
+  
+}
+
+
+leafgrowth = function(t) {
+  lf = (t)**2 + 20
+  
+  if (t > 30) {
+    lf = lf / 10
+  }
+  
+  if (t < 0) {
+    lf = 0
+  }
+  
+  return(lf)
+}
+
+
 #HOW do you convert dataframe into multidimensional? Example was just populating a blank thing
 
 
