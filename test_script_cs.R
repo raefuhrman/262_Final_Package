@@ -18,6 +18,12 @@ avg_precip <- climate_sb_2018_modified %>%
   group_by(month, year) %>% 
   summarize(average = mean(PRCP))
 
+
+
+
+
+
+
 plant_growth = function(PRCP) {
   pg = (PRCP) ** 3 + 5
   
