@@ -31,7 +31,6 @@ avg_month_precip = function(climate = climate_sb_2018_modified) {
 
 avg_month_precip()
 
-
 sunshine_hours = array(dim=c(6,12,3)) # Years, Months, Locations
 
 for (i in 1:6) {
@@ -46,13 +45,9 @@ dimnames(sunshine_hours) = list(c("2001","2002","2003","2004","2005", "2006"),
                          "Sep", "Oct", "Nov", "Dec"),
                        c("Loc1","Loc2", "Loc3"))
 
-
 plant_growth = function(sun = sunshine_hours) {
 
     growth = ifelse (sunshine_hours > 1, sunshine_hours^2 + 3, 0)
     return(growth)
 
 }
-
-
-
