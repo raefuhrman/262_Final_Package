@@ -47,7 +47,18 @@ dimnames(sunshine_hours) = list(c("2001","2002","2003","2004","2005", "2006"),
 
 plant_growth = function(sun = sunshine_hours) {
 
-    growth = ifelse (sunshine_hours > 1, sunshine_hours^2 + 3, 0)
+    growth = ifelse (sun > 1, sun^2 + 3, 0)
     return(growth)
 
 }
+
+plant_growth_mda <- plant_growth()
+
+plant_revenue = function(growth = plant_growth_mda) {
+
+  revenue = growth * 3.75
+  return(revenue)
+}
+
+plant_revenue_mda <- plant_revenue()
+plant_revenue_mda

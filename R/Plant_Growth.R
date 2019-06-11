@@ -7,7 +7,7 @@
 
 plant_growth = function(sun = sunshine_hours) {
 
-  growth = ifelse (sunshine_hours > 1, sunshine_hours^2 + 3, 0)
+  growth = ifelse (sun > 1, sun^2 + 3, 0)
   return(growth)
 
 }
