@@ -11,4 +11,5 @@ plant_revenue = function(growth = plant_growth_mda) {
 
   revenue = growth * 3.75
   return(revenue)
+  
 }
