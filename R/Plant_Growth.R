@@ -1,5 +1,7 @@
 #' Plant Growth
+#' 
 #' This function calculates plant growth for an imaginary plant that grows only when sunshine hours for a certain timeframe is bigger than one.
+#' 
 #' @param Sun.  A dataframe, multidimensional array, or other input that contains sunshine hours.  The default is sunshine_hours, a multidimensional array with sunshine hours by months and years for three different locations.
 #' @author Cristina
 #' @example plant_growth(sun = sunshine_hours)
