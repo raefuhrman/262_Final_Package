@@ -3,9 +3,7 @@
 #' @param
 #' @return
 
-###function
-Average_Monthly_Temperature = function(climate_data){
-
+Total_yearly_precipitation = function(climate_data) {
   ##parse date to use group by and summarize functions later
   climate_data$DATE <- parse_date_time(x = climate_data$DATE,
                                        orders = c("d m y", "d B Y", "mdy"))
@@ -16,14 +14,10 @@ Average_Monthly_Temperature = function(climate_data){
     dplyr::filter(STATION == "USC00047902") %>%
     dplyr::select(STATION, PRCP, TMAX, TMIN, TOBS, DATE)
 
-  ##average observed temperature by month
-  average_temp <- station_1 %>%
-    dplyr::mutate(Month = format(station_1$DATE, "%m")) %>%
-    dplyr::group_by(Month) %>%
-    dplyr::summarize(Average_Monthly_Temp = mean(TOBS))
+  ##sum the precipitation at station 1
+  yearly_precip <- as.data.frame(sum(station_1$PRCP))
+  colnames(yearly_precip) <- "Total Rain (2018) at Station 1"
 
   ## output from function
-  return(average_temp)
+  return(yearly_precip)
 }
-
-
