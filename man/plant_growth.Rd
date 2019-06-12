@@ -2,8 +2,7 @@
 % Please edit documentation in R/Plant_Growth.R
 \name{plant_growth}
 \alias{plant_growth}
-\title{Plant Growth
-This function calculates plant growth for an imaginary plant that grows only when sunshine hours for a certain timeframe is bigger than one.}
+\title{Plant Growth}
 \usage{
 plant_growth(sun = sunshine_hours)
 }
@@ -14,7 +13,6 @@ plant_growth(sun = sunshine_hours)
 The plant growth of an imaginary plant based on hours of sunshine.  Assume this growth is in mm.
 }
 \description{
-Plant Growth
 This function calculates plant growth for an imaginary plant that grows only when sunshine hours for a certain timeframe is bigger than one.
 }
 \author{

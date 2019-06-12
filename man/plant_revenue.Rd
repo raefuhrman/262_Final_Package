@@ -2,8 +2,7 @@
 % Please edit documentation in R/plant_revenue.R
 \name{plant_revenue}
 \alias{plant_revenue}
-\title{Plant Revenue
-This function calculates plant revenue for a very valuable, imaginary plant based on its growth in mm, where each mm growth generates $3.75 in revenue.}
+\title{Plant Revenue}
 \usage{
 plant_revenue(growth = plant_growth_mda)
 }
@@ -14,7 +13,6 @@ plant_revenue(growth = plant_growth_mda)
 The revenue in $ from an imaginary plant for each timeframe.  The default data in multidimensional array also returns a multidimensional array.
 }
 \description{
-Plant Revenue
 This function calculates plant revenue for a very valuable, imaginary plant based on its growth in mm, where each mm growth generates $3.75 in revenue.
 }
 \author{
