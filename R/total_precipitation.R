@@ -1,5 +1,5 @@
 #' @author Rae Fuhrman
-#' @title average temperature
+#' @title total yearly temperature
 #' @param
 #' @return
 
