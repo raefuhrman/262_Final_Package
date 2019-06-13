@@ -1,0 +1,30 @@
+## ----setup, include=FALSE------------------------------------------------
+knitr::opts_chunk$set(echo = TRUE)
+library(ClimateImpacts)
+
+## ----example_plantgrowth-------------------------------------------------
+
+#get sunshine_hours data.  This represents (imaginary) average daily hours of sunshine for a given month between 2001 and 2006, for three different locations.  It is a multidimension array (12 months as columns, 6 years as rows, and 3 locations in the 3rd dimension)
+data(sunshine_hours)
+
+#If you want to use the standard data in multidimensional array format, you can simply run the function.  This gives the (imaginary) growth in mm of a plant in that month.
+
+plant_growth_result <- plant_growth()
+plant_growth_result
+
+#This should give the same results as plant_growth_mda, which was created by applying the plant_growth function to the sunshine_hours multidimensional array.
+data(plant_growth_mda)
+plant_growth_mda
+
+#You could also run the function with other data in other formats, such as a single vector.  For instance:
+
+madeup_vector <- c(3,4,8,23)
+madeup_example <- plant_growth(madeup_vector)
+madeup_example
+
+
+## ----example_plantrevenue------------------------------------------------
+
+
+
+
