@@ -13,8 +13,10 @@ Imaginary data for monthly plant growth, in mm, by months and years between 2001
 }
 \details{
 @format A multidimensional array, with years in rows, months in columns, and locations in the third dimension.
- @source Plant_Growth function applied to sunshine_hours (random data)
- \itemize{
+
+@source Plant_Growth function applied to sunshine_hours (random data)
+
+\itemize{
  \item plant growth (mm)
  }
 }
