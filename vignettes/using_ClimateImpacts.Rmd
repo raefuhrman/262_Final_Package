@@ -1,8 +1,8 @@
 ---
-title: "Cristina and Rae-vignette"
+title: "ClimateImpacts-vignette"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{my-vignette}
+  %\VignetteIndexEntry{ClimateImpacts-vignette}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -16,7 +16,7 @@ This example illustrates the use of the function plant_growth using the imaginar
 
 ```{r example_plantgrowth}
 
-#get sunshine_hours data.  This represents (imaginary) average daily hours of sunshine for a given month between 2001 and 2006, for three different locations.  It is a multidimension array (12 months as columns, 6 years as rows, and 3 locations in the 3rd dimension)
+#Get sunshine_hours data.  This represents (imaginary) average daily hours of sunshine for a given month between 2001 and 2006, for three different locations.  It is a multidimension array (12 months as columns, 6 years as rows, and 3 locations in the 3rd dimension)
 data(sunshine_hours)
 
 #If you want to use the standard data in multidimensional array format, you can simply run the function.  This gives the (imaginary) growth in mm of a plant in that month.
@@ -30,15 +30,59 @@ plant_growth_mda
 
 #You could also run the function with other data in other formats, such as a single vector.  For instance:
 
-madeup_vector <- c(3,4,8,23)
+madeup_vector <- c(3,4,8,23) # This vector represents 3 hours of sun on Monday, 4 hours of sun on Tuesday, 8 on Wednesday, and 23 on Thursday.
 madeup_example <- plant_growth(madeup_vector)
 madeup_example
 
 ```
 
+This example illustrates the use of the plant_revenue function.
+
 ```{r example_plantrevenue}
 
+# Get growth data.  This was created by applying the plant_growth function to the sunshine_hours multidimensional array, and is also a multidimensional array.
+data(plant_growth_mda)
 
+# To apply the revenue function to the default plant_growth_mda, simply run the function:
+
+plant_growth_revenue <- plant_revenue()
+plant_growth_revenue
+
+#Assuming each mm of growth is worth $3.75 (imaginary plants are worth a lot of money), this function will provide the total revenue per timestep per location of the input data - in this example, it shows the revenue for each month between 2001 and 2006 of the three locations.
+
+#Other data can also be used as an input.
+
+madeup_growth_vector <- c(2,18,15,4,9) # This plant grew 2mm on Monday, 18 on Tuesday, and so on.
+madeup_growth_example <- plant_revenue(madeup_growth_vector)
+madeup_growth_example
+
+```
+
+This example illustrates the use of the total_precipitation function.
+
+```{r example_total_precip}
+
+# Get climate data.  This was accessed from Climate Data Online from  https://www.ncdc.noaa.gov, and represents climate data from Santa Barbara in 2018.  It is a dataframe format with several different stations and types of weather data (listed in different columns): in this example, we will only be using the Station data and precipitation information.
+data(climate_data)
+
+# Applying the function to the data will return total precipitation for Station "USC00047902" in 2018
+
+total_station_precip <- Total_yearly_precipitation(climate_data)
+total_station_precip
+
+```
+
+This example illustrates the use of the average_monthly_temperature function
+
+```{r}
+
+# Get climate data.  This was accessed from Climate Data Online from  https://www.ncdc.noaa.gov, and represents climate data from Santa Barbara in 2018.  It is a dataframe format with several different stations and types of weather data (listed in different columns): in this example, we will only be using the Station data and temperature information.
+data(climate_data)
+
+# Applying the function to the data will return the average temperature for each month of Station "USC00047902" in 2018, in degrees F.  Month 1 represents January and so on.
+
+avg_month_temp <- Average_Monthly_Temperature(climate_data)
+avg_month_temp
 
 ```
 
