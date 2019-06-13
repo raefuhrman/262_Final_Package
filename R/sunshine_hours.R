@@ -7,4 +7,4 @@
 #'  \itemize{
 #'  \item sunshine hours
 #'  }
-#'
+"sunshine_hours"
