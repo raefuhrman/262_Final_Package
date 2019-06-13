@@ -1,11 +1,10 @@
 #' Plant growth based on precipitation
 #'
-#' This function calculates plant growth for an imaginary plant that grows only when sunshine hours for a certain timeframe is bigger than one.
-#'
-#' @param Sun.  A dataframe, multidimensional array, or other input that contains sunshine hours.  The default is sunshine_hours, a multidimensional array with sunshine hours by months and years for three different locations.
+#' This function calculates plant growth for an imaginary plant that grows only when precipitation values are above a threshold (0.5 cm)
+#' @param PRCP  A variable in dataframe called climate_data. The default is climate_data, a dataframe with sunshine hours by months and years for one station in Santa Barbara.
 #' @author Rae Fuhrman
-#' @example plant_growth(sun = sunshine_hours)
-#' @return The plant growth of an imaginary plant based on hours of sunshine.  Assume this growth is in mm.
+#' @example precipitation_plant_growth(climate_data)
+#' @return A list of the plant growth of an imaginary plant based on cm of precipitation for each value of precipitation associated with a date. Assume this growth is in mm.
 
 precipitation_plant_growth = function(climate_data) {
 
