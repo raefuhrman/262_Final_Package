@@ -10,7 +10,7 @@ precipitation_plant_growth(climate_data)
 \item{PRCP}{A variable in dataframe called climate_data. The default is climate_data, a dataframe with sunshine hours by months and years for one station in Santa Barbara.}
 }
 \value{
-The plant growth of an imaginary plant based on cm of precipitation.  Assume this growth is in mm.
+A list of the plant growth of an imaginary plant based on cm of precipitation for each value of precipitation associated with a date. Assume this growth is in mm.
 }
 \description{
 This function calculates plant growth for an imaginary plant that grows only when precipitation values are above a threshold (0.5 cm)

@@ -4,7 +4,7 @@
 #' @param PRCP  A variable in dataframe called climate_data. The default is climate_data, a dataframe with sunshine hours by months and years for one station in Santa Barbara.
 #' @author Rae Fuhrman
 #' @example precipitation_plant_growth(climate_data)
-#' @return The plant growth of an imaginary plant based on cm of precipitation.  Assume this growth is in mm.
+#' @return A list of the plant growth of an imaginary plant based on cm of precipitation for each value of precipitation associated with a date. Assume this growth is in mm.
 
 precipitation_plant_growth = function(climate_data) {
 
