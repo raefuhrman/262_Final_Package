@@ -2,12 +2,15 @@
 % Please edit documentation in R/Average_Monthly_Temperature.R
 \name{Average_Monthly_Temperature}
 \alias{Average_Monthly_Temperature}
-\title{average temperature}
+\title{Average temperature}
 \usage{
 Average_Monthly_Temperature(climate_data)
 }
+\value{
+The average temperature for each month in 2018 at the station USC00047902
+}
 \description{
-average temperature
+Average temperature
 }
 \author{
 Rae Fuhrman

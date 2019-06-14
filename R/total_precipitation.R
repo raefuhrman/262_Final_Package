@@ -1,7 +1,7 @@
 #' @author Rae Fuhrman
-#' @title total yearly temperature
-#' @param
-#' @return
+#' @title Total yearly precipitation
+#' @example Total_yearly_precipitation(climate_data)
+#' @return Total precipitation in 2018 at the station USC00047902
 
 Total_yearly_precipitation = function(climate_data) {
   ##parse date to use group by and summarize functions later

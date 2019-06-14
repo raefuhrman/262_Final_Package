@@ -2,12 +2,15 @@
 % Please edit documentation in R/total_precipitation.R
 \name{Total_yearly_precipitation}
 \alias{Total_yearly_precipitation}
-\title{total yearly temperature}
+\title{Total yearly precipitation}
 \usage{
 Total_yearly_precipitation(climate_data)
 }
+\value{
+Total precipitation in 2018 at the station USC00047902
+}
 \description{
-total yearly temperature
+Total yearly precipitation
 }
 \author{
 Rae Fuhrman
