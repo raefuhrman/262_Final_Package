@@ -10,7 +10,7 @@ Average_Monthly_Temperature(climate_data)
 The average temperature for each month in 2018 at the station USC00047902
 }
 \description{
-Average temperature
+This function gives the average monthly temperatures at a specific station in Santa Barbara in 2018 based on a climate dataset from NOAA.
 }
 \author{
 Rae Fuhrman

@@ -1,3 +1,4 @@
+#' This function sums the yearly precipitation at a specific station in Santa Barbara in 2018 based on a climate dataset from NOAA.
 #' @author Rae Fuhrman
 #' @title Total yearly precipitation
 #' @example Total_yearly_precipitation(climate_data)

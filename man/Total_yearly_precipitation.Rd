@@ -10,7 +10,7 @@ Total_yearly_precipitation(climate_data)
 Total precipitation in 2018 at the station USC00047902
 }
 \description{
-Total yearly precipitation
+This function sums the yearly precipitation at a specific station in Santa Barbara in 2018 based on a climate dataset from NOAA.
 }
 \author{
 Rae Fuhrman
