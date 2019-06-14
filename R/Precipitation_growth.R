@@ -9,7 +9,7 @@
 precipitation_plant_growth = function(climate_data) {
 
   ##parse date to use group by and summarize functions later
-  climate_data$DATE <- parse_date_time(x = climate_data$DATE,
+  climate_data$DATE <- lubridate::parse_date_time(x = climate_data$DATE,
                                        orders = c("d m y", "d B Y", "mdy"))
   climate_data$DATE <- as.Date(climate_data$DATE, format = "%m/%d/%y")
 
