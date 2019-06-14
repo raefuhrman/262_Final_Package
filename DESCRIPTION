@@ -4,10 +4,7 @@ Title: Various climate impacts on plant growth
 Version: 0.1.0
 Author: Rae Fuhrman and Cristina Sparks
 Maintainer: rfuhrman@bren.ucsb.edu
-Description: This package uses one climate dataset from NOAA with temperature 
-and precipitation values that are used to estimate various plant growth metrics.
-There is an additional sample multi-dimensional array with sunshine hours to test
-a plant growth function for an imaginary plant. 
+Description: This package uses one climate dataset from NOAA with temperature and precipitation values that are used to estimate various plant growth metrics. There is an additional sample multi-dimensional array with sunshine hours to test a plant growth function for an imaginary plant. 
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
