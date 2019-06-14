@@ -1,5 +1,5 @@
 context("test-total_precipitation")
 
-test_that("multiplication works", {
-  expect_equal(2 * 2, 4)
+test_that("rain not negative", {
+  expect_true(min(climate_data$PRCP)>=0)
 })
