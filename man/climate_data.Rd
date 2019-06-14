@@ -3,16 +3,16 @@
 \docType{data}
 \name{climate_data}
 \alias{climate_data}
-\title{Climate data from Santa Barbara in 2018}
+\title{Climate data from Santa Barbara in 2018 from station USC00047902}
 \format{An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 2740 rows and 22 columns.}
 \usage{
 climate_data
 }
-\value{
-
+\arguments{
+\item{STATION, }{PRCP, TMAX, TMIN, TOBS, DATE}
 }
 \description{
-Climate data from Santa Barbara in 2018
+Climate data from Santa Barbara in 2018 from station USC00047902
 }
 \author{
 Rae Fuhrman

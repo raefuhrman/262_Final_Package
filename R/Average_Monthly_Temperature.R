@@ -1,7 +1,7 @@
 #' @author Rae Fuhrman
-#' @title average temperature
-#' @param
-#' @return
+#' @title Average temperature
+#' @return The average temperature for each month in 2018 at the station USC00047902
+#' @example Average_Monthly_Temperature(climate_data)
 
 ###function
 Average_Monthly_Temperature = function(climate_data){
